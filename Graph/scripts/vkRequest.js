@@ -73,7 +73,7 @@ let Users = new class UserBuffer{
 
 VKRequestConstructor('users.get', {
   user_ids:target, callback:'generateFirstUser',
-  access_token:'bfed9fa1bfed9fa1bfed9fa10dbcf99d8fbbfedbfed9fa1dbb076e664ea8f987ca6a7f7', v:'5.131',
+  access_token:token_key, v:'5.131',
   fields:`screen_name,first_name,last_name,deactivated,is_closed,status,city,country,sex,nickname,activities,about,books,bdate,career,connections,contacts,domain,education,exports,followers_count,friend_status,has_photo,has_mobile,home_town,photo_100,photo_400_orig,photo_max_orig,site,schools,verified,games,interests,last_seen,maiden_name,military,movies,music,occupation,online,personal,quotes,relation,relatives,timezone,tv,universities`
 })
 
@@ -104,7 +104,7 @@ function generateFirstUser(result){
   
   VKRequestConstructor('friends.get', {
     user_id:target, callback:'responseFriends',
-    access_token:'bfed9fa1bfed9fa1bfed9fa10dbcf99d8fbbfedbfed9fa1dbb076e664ea8f987ca6a7f7', v:'5.131',
+    access_token: token_key, v:'5.131',
     fields:`screen_name,first_name,last_name,deactivated,is_closed,status,city,country,sex,nickname,activities,about,books,bdate,career,connections,contacts,domain,education,exports,followers_count,friend_status,has_photo,has_mobile,home_town,photo_100,photo_400_orig,photo_max_orig,site,schools,verified,games,interests,last_seen,maiden_name,military,movies,music,occupation,online,personal,quotes,relation,relatives,timezone,tv,universities`
   })
   Users.Render(target)
