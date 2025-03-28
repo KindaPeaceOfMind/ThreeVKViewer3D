@@ -17,8 +17,8 @@ function init() {
     
   ].forEach((el)=>AddScript(el));
 
-  target = prompt('Напишите Id пользователя, друзей которого нужно вывести');
-  token_key = '6e7b4f086e7b4f086e7b4f08016d60135566e7b6e7b4f0808cd415a2b0d6aabb97b6119'
+  target = prompt('Напишите Id пользователя вконтакте, друзей которого нужно вывести');
+  token_key = prompt('Напишите token мини-приложения, у которого есть доступ к друзьям пользователя');
 }
 
 function AddScript(src) {
